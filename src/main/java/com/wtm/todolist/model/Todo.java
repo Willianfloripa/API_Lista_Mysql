@@ -1,4 +1,4 @@
-package com.wtm.todolist.model;
+package com.wtm.todolist.Model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

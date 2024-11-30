@@ -6,27 +6,35 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.wtm.todolist.model.Todo;
-import com.wtm.todolist.repository.TodoRepository;
+import com.wtm.todolist.Model.Todo;
+import com.wtm.todolist.Repository.TodoRepository;
 
-@Service
+@Service // Classes anotadas com @Service podem ser injetadas em outras classes para
+         // fornecer lógica de negócio. O Spring gerencia essas classes, o que significa
+         // que o ciclo de vida e o gerenciamento de dependências são feitos
+         // automaticamente.
+
 public class TodoService {
     @Autowired
-    private TodoRepository todoRepository;
+    private TodoRepository todoRepository; // Injetando o repositorio para uso das funções jpa findAll etc..
 
-    public List<Todo> findAll() {
+    // Tarefa para retornar todos do BD
+    public List<Todo> retornaTodos() {
         return todoRepository.findAll();
     }
 
-    public Optional<Todo> findById(Long id) {
+    // Tarefa para retornar um Id opocional do BD
+    public Optional<Todo> retornaId(Long id) {
         return todoRepository.findById(id);
     }
 
-    public Todo save(Todo todo) {
+    // Salva uma nova tarefa no banco de dados
+    public Todo salva(Todo todo) {
         return todoRepository.save(todo);
     }
 
-    public void deleteByid(Long id) {
+    // Tarefa para deletar um Id opocional do BD
+    public void deletaId(Long id) {
         todoRepository.deleteById(id);
     }
 
