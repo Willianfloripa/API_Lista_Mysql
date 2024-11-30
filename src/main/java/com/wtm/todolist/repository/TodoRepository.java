@@ -5,8 +5,9 @@ import org.springframework.stereotype.Repository;
 
 import com.wtm.todolist.Model.Todo;
 
-@Repository // JpaRepository: Fornece métodos prontos como save, findById, delete, etc
-            // usados no service.
+// JpaRepository: Fornece métodos prontos como save, findById, delete, etc
+// Usados no service.
+@Repository
 public interface TodoRepository extends JpaRepository<Todo, Long> {
 
 }

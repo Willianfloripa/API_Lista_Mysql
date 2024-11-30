@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 import com.wtm.todolist.Model.Todo;
 import com.wtm.todolist.Repository.TodoRepository;
 
-@Service // Classes anotadas com @Service podem ser injetadas em outras classes para
-         // fornecer lógica de negócio. O Spring gerencia essas classes, o que significa
-         // que o ciclo de vida e o gerenciamento de dependências são feitos
-         // automaticamente.
-
+// Classes anotadas com @Service podem ser injetadas em outras classes para
+// fornecer lógica de negócio. O Spring gerencia essas classes, o que significa
+// que o ciclo de vida e o gerenciamento de dependências são feitos
+// automaticamente.
+@Service
 public class TodoService {
     @Autowired
     private TodoRepository todoRepository; // Injetando o repositorio para uso das funções jpa findAll etc..
