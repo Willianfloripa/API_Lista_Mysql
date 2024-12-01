@@ -20,6 +20,7 @@ Uma API desenvolvida com **Spring Boot** para gerenciar tarefas (ToDo List), uti
 - **Spring Boot**:
   - Spring Web
   - Spring Data JPA
+  - Spring Boot DevTools
 - **MySQL**
 - **Lombok**
 - **Maven**
